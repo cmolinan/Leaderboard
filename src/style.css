@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Verdana', sans-serif;
+  font-style: normal;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.mainSection {
+  align-items: center;
+  margin: 5% auto;
+  max-width: 800px;
+}
+
+.mainSection h1 {
+  font-size: 28px;
+  width: 70%;
+  padding-left: 3%;
+  padding-top: 5%;
+  padding-bottom: 6%;
+}
+
+.contentDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 3% 3%;
+}
+
+#refreshBtn {
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 45%);
+  width: 30%;
+  align-self: flex-end;
+  justify-self: center;
+  margin-bottom: 5%;
+}
+
+#refreshBtn:hover {
+  border: 1px solid rgb(235, 233, 233);
+  background-color: gray;
+  color: white;
+}
+
+.scoresDiv {
+  padding: 0 6%;
+  flex: 1;
+}
+
+#scoresTable {
+  border: 2px solid black;
+}
+
+div#scoresTable > div:nth-of-type(odd) {
+  background: lightgray;
+}
+
+.scores-list {
+  font-size: 14px;
+  height: 20px;
+  padding-left: 2%;
+}
+
+.h2andBtn {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.h2andBtn h2 {
+  font-size: 18px;
+  padding-bottom: 5%;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0;
+}
+
+.inputDiv h2 {
+  font-size: 18px;
+  padding-bottom: 5%;
+  width: auto;
+}
+
+#formInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formInputs input {
+  width: auto;
+}
+
+#submitBtn {
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 45%);
+  width: 30%;
+  align-self: flex-end;
+}
+
+#submitBtn:hover {
+  border: 1px solid rgb(235, 233, 233);
+  background-color: gray;
+  color: white;
+}
