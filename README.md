@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leadeboard project: Setup
+# Leadeboard project: Hit the API
 
-> Setup is the first milestone for this project. 
+> Hit the API is the second milestone for this project. 
 Leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 ## Built With
@@ -10,6 +10,8 @@ Leaderboard website displays scores submitted by different players. It also allo
 - HTML / CSS 
 - JavaScript: objects, classes and modules with ES6 syntax 
 - Webpack
+- Gitflow
+
 
 ## Getting Started
 

@@ -20,7 +20,13 @@ class Library {
     const newScore = new Scores(name, score);
     this.add(newScore);
     return newScore;
-  };
+  }
+
+  initializeScores = () => {
+    const scoresL = this.scores.length;
+    for (let i = 0; i < scoresL; i += 1) this.scores.pop();
+    this.nextId = 0;
+  }
 }
 
 export default Library;
