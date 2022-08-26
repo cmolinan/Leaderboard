@@ -3,6 +3,7 @@
 # Leadeboard project: Hit the API
 
 > Hit the API is the second milestone for this project. 
+
 Leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 ## Built With
@@ -16,6 +17,7 @@ Leaderboard website displays scores submitted by different players. It also allo
 ## Getting Started
 
 - To get a local copy up, clone the repo like this: 
+
    git clone git@github.com:cmolinan/leaderboard.git
 
 - Install the dependencies using `npm install` and then run the project from the root of the folder using this command `npm run start`
