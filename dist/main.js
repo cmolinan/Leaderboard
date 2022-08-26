@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dom.js */ \"./src/modules/dom.js\");\n\n\n\n\nconst dom = new _modules_dom_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n// INITS\nfunction init() {\n  dom.addScoreButtonListener(); // Listener for Submit Form\n  dom.refreshListButtonListener(0); // Listener for Refresh Button\n  dom.refreshScoresList(0); // Load the HTML list\n}\n\nwindow.addEventListener('load', init);\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_dom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dom.js */ \"./src/modules/dom.js\");\n\n\n\n\nconst dom = new _modules_dom_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\n// INITS\nconst init = () => {\n  dom.addScoreButtonListener(); // Listener for Submit Form\n  dom.refreshListButtonListener(0); // Listener for Refresh Button\n  dom.refreshScoresList(0); // Load the HTML list\n};\n\nwindow.addEventListener('load', init);\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ }),
 
