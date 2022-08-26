@@ -86,6 +86,14 @@ class DOM {
         });
     }
   }
+
+  addScoreButtonListener = () => {
+    this.addScoreForm.addEventListener('click', this.addNewScore);
+  };
+
+  refreshListButtonListener = () => {
+    this.refreshListButton.addEventListener('click', this.refreshScoresList);
+  };
 }
 
 export default DOM;
