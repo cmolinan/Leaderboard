@@ -6,16 +6,28 @@
   font-style: normal;
 }
 
-ul {
-  padding-left: 0;
-  list-style: none;
-  padding-inline-start: 0;
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/stars2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
 .mainSection {
-  align-items: center;
-  margin: 3% auto;
+  border: 1px solid yellow;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 190, 0.75);
+  -webkit-box-shadow: 0 0 15px 5px rgba(255, 255, 190, 0.75);
+  border-radius: 25px;
+  margin: 5% auto 15% auto;
   max-width: 800px;
+  padding: 3%;
+  background-image: url('./images/img2.png');
+  background-repeat: repeat;
+  color: black;
+  /* stylelint-disable-next-line csstree/validator */
+  height: fit-content;
 }
 
 .mainSection h1 {
@@ -24,7 +36,6 @@ ul {
   padding-left: 3%;
   padding-top: 5%;
   padding-bottom: 6%;
-  max-height: 60%;
 }
 
 .contentDiv {
@@ -41,35 +52,53 @@ ul {
   align-self: flex-end;
   justify-self: center;
   margin-bottom: 5%;
+  height: 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: black;
 }
 
 #refreshBtn:hover {
   border: 1px solid rgb(235, 233, 233);
-  background-color: gray;
+  background-color: darkgoldenrod;
   color: white;
 }
 
 .scoresDiv {
   padding: 0 6%;
   flex: 1;
+  height: max-content;
 }
 
 #scoresTable {
   border: 2px solid black;
+  border-radius: 15px;
   gap: 7%;
-  min-height: 400px;
-  max-height: 60%;
-  overflow: scroll;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: scroll;
+  background-color: white;
+  color: black;
 }
 
 div#scoresTable > div:nth-of-type(odd) {
-  background: lightgray;
+  background-color: goldenrod;
 }
 
 .scores-list {
   font-size: 14px;
-  height: 20px;
+  font-weight: 650;
+  line-height: 165%;
   padding-left: 2%;
+}
+
+#name,
+#score {
+  border-radius: 10px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 450;
+  margin-bottom: 1%;
 }
 
 .h2andBtn {
@@ -96,6 +125,21 @@ div#scoresTable > div:nth-of-type(odd) {
   width: auto;
 }
 
+#notif {
+  display: none;
+  border: 2px solid red;
+  border-radius: 15px;
+  margin-top: 10%;
+  padding-top: 4%;
+  color: red;
+  align-self: center;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 5%;
+  width: auto;
+  background-color: white;
+}
+
 #formInputs {
   display: flex;
   flex-direction: column;
@@ -111,10 +155,60 @@ div#scoresTable > div:nth-of-type(odd) {
   box-shadow: 0 2px 8px rgb(0 0 0 / 45%);
   width: 30%;
   align-self: flex-end;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 25px;
+  font-weight: 600;
 }
 
 #submitBtn:hover {
   border: 1px solid rgb(235, 233, 233);
-  background-color: gray;
+  background-color: darkgoldenrod;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    border: 2px solid gray;
+    border-radius: 25px;
+    margin: 5% 5%;
+  }
+
+  .contentDiv {
+    flex-direction: column;
+    padding: 3% 3%;
+  }
+
+  .scores-list {
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 165%;
+    padding-left: 2%;
+  }
+
+  .inputDiv {
+    padding: 3%;
+    max-width: 768px;
+    align-self: center;
+  }
+
+  .inputDiv h2 {
+    text-align: center;
+  }
+
+  #scoresTable {
+    min-height: auto;
+    max-height: 400px;
+  }
+
+  #submitBtn {
+    align-self: center;
+    height: 30px;
+    width: 45%;
+  }
+
+  #name,
+  #score {
+    height: 30px;
+  }
 }

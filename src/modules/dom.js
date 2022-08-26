@@ -17,12 +17,15 @@ class DOM {
 
   scoreInput = document.getElementById('score');
 
+  notif = document.getElementById('notif');
+
   // add one item to the HTML list
   createScoreItemHTML = (id, name, score) => {
     const divContainer = document.createElement('div');
     divContainer.id = `score-${id}`;
     divContainer.classList.add('scores-list');
     divContainer.innerText = `${name}: ${score}`;
+    // divContainer.innerText = `${name}: ${score}`;
     return divContainer;
   };
 
@@ -65,12 +68,11 @@ class DOM {
       // eslint-disable-next-line no-unused-vars
       .catch((error) => {
         // TO DO: Notificator
-        // console.log(error.name, '--ERROR');
       });
   };
 
   addNewScore = (e) => {
-    e.preventDefault();
+    if (e !== 0) e.preventDefault();
     if (this.nameInput.value !== '' && this.scoreInput.value !== '') {
       this.apiCalls.postScore(this.nameInput.value, this.scoreInput.value)
         .then(() => {
@@ -78,6 +80,12 @@ class DOM {
           this.nameInput.value = '';
           this.scoreInput.value = '';
           this.nameInput.focus = true;
+
+          this.notif.style.display = 'block';
+          this.notif.textContent = '***New Score added ! ***';
+          setTimeout(() => {
+            this.notif.style.display = 'none';
+          }, 2500);
         })
         // eslint-disable-next-line no-unused-vars
         .catch((error) => {
@@ -94,6 +102,24 @@ class DOM {
   refreshListButtonListener = () => {
     this.refreshListButton.addEventListener('click', this.refreshScoresList);
   };
+
+  enterOnNameInputListener = () => {
+    this.nameInput.addEventListener('keyup', (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        this.scoreInput.focus();
+      }
+    });
+  }
+
+  enterOnScoreInputListener = () => {
+    this.scoreInput.addEventListener('keyup', (event) => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        this.addNewScore(0);
+      }
+    });
+  }
 }
 
 export default DOM;
