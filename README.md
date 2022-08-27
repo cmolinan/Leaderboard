@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leadeboard project: Hit the API
+# Leadeboard project: Final touches
 
-> Hit the API is the second milestone for this project. 
+> Hit the API is the third milestone for this project. 
 
 Leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
